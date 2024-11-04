@@ -24,7 +24,7 @@ const Follow = () => {
             </ul>
         </nav>
         <p></p>
-        <img id="home-pic" src="images/home-pic.webp" alt="main picture" />
+        <img id="home-pic" src="images/home-pic.jpg" alt="main picture" />
         </>
     );
 };

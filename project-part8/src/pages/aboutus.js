@@ -13,7 +13,7 @@ const Aboutus = () => {
             <p id="home-content">Season ticket information</p>
             <p id="home-content">Account manager</p>
             <p id="home-content">Access your digital tickets</p>
-            <img id="home-pic" src="images/home-pic.webp" alt="Main picture" />
+            <img id="home-pic" src="images/home-pic.jpg" alt="Main picture" />
         </>
     );
 };
