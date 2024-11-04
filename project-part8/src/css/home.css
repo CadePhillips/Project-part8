@@ -1,0 +1,38 @@
+body {
+    text-align: center;
+}
+
+body img {
+    max-width: 80%;
+}
+
+body ul {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body li {
+    list-style-type: none;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #830E0D;
+}
+
+body a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.next {
+    background-color: #830E0D;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
