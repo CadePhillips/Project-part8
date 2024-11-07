@@ -15,7 +15,7 @@ const Home = () => {
                 <p>Welcome to the USC Baseball Tracker</p>
                 <p>The one stop shop for everything USC Baseball</p>
             </div>
-            <img src="images/home-pic.jpg" alt="Picture of Founders Park" />
+            <img src={process.env.PUBLIC_URL + '/images/home-pic.jpg'} />
             <div>
                 <p id="home-content">NCAA National Champions: 2010, 2011</p>
                 <p id="home-content">College World Series Runner-Ups: 1975, 1977, 2002, 2012</p>
