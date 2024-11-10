@@ -1,0 +1,11 @@
+.hide-small {
+    display: none;
+}
+
+/* Media Query */
+@media only screen and (min-width: 768px) {
+
+    .hide-small {
+        display: flex;
+    }
+}

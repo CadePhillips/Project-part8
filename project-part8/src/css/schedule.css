@@ -1,0 +1,9 @@
+#schedule-pic {
+    padding-right: 200px;
+}
+
+@media only screen and (min-width: 768px) {
+    #schedule-pic {
+        padding-right: 100px;
+    }
+}

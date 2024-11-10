@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header>
             <h1>USC Baseball Tracker</h1>
-            <ul id="nav-items" class="columns hidden-small">
+            <ul id="nav-items" class="columns hidden-small" className={menuOpen ? "" : "hide-small"}>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/roster">Roster</Link></li>
                 <li><Link to="/coaches">Coaches</Link></li>
