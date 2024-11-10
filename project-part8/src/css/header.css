@@ -2,10 +2,28 @@
     display: none;
 }
 
+#toggle {
+    left: 5px;
+    background: black;
+    opacity: .25;
+    width: fit-content;
+    padding: 1px 3px;
+    margin-bottom: 2px;
+}
+
+#toggle div {
+    width: 25px;
+    height: 2px;
+    background: white;
+    margin: 6px 0;
+}
+
 /* Media Query */
 @media only screen and (min-width: 768px) {
-
     .hide-small {
         display: flex;
+    }
+    #toggle {
+        display: none;
     }
 }
