@@ -1,0 +1,14 @@
+#contact-section {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: gray;
+    padding: 10px;
+    text-align: center;
+}
+
+#contact {
+    display:flex;
+    padding: 10px;
+}

@@ -1,42 +1,44 @@
-/* Need help
-const Contactme = () => {
-    const sendEmail = async(json) => {
-        try {
-            const response = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                headers:{
-                    "Content-Type":"application/json",
-                    Accept:"application/json"
-                },
-                body:json
-            });
+import React from "react";
+import "../css/contactme.css";
 
-            return response;
-        } catch(error){
-            console.log(error);
-            result.innerHTML = "Sorry, your email couldn't be sent";
-        }
+export default function Contact() {
+    const [result, setResult] = React.useState("");
+  
+    const onSubmit = async (event) => {
+      event.preventDefault();
+      setResult("Sending....");
+      const formData = new FormData(event.target);
+  
+      formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+  
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        event.target.reset();
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+      }
     };
-
-    document.getElementById("contact-form").onsubmit = async(e) => {
-        e.preventDefault();
-
-        const form = e.target;
-        const formData = new FormData(form);
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
-        
-        const result = document.getElementById("result");
-        result.innerHTML = "Sending...";
-
-        const httpResult = await sendEmail(json);
-        if(httpResult.status == 200) {
-            result.innerHTML = "Email successfully sent"
-        } else {
-            result.innerHTML = "Sorry, your email wasn't sent";
-        }
-    }
-}
-
-export default Contactme;
-*/
+  
+    return (
+      <div id="contact-section">
+        <form id="contact" onSubmit={onSubmit}>
+          <input type="text" name="name" placeholder="Name" required/>
+          <input type="email" name="email" placeholder="email@email.com" required/>
+          <textarea name="message" placeholder="Message" required></textarea>
+  
+          <button type="submit">Submit Form</button>
+  
+        </form>
+        <span>{result}</span>
+  
+      </div>
+    );
+  }
