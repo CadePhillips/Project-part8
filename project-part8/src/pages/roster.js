@@ -49,7 +49,7 @@ const Roster = () => {
                 <Player 
                 name={player.name}
                 number={player.number}
-                position={player.position}
+                position={player.postion}
                 year={player.year}
                 image={player.image}
                 />
