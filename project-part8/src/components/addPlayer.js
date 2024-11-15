@@ -53,8 +53,8 @@ const AddPlayer = (props) => {
               <input type="number" id="number" name="number" required value={inputs.number || ""} onChange={handleChange}/>
             </p>
             <p>
-              <label htmlFor="position">Positions:</label>
-              <input type="text" id="position" name="position" required value={inputs.postion || ""} onChange={handleChange}/>
+              <label htmlFor="postion">Positions:</label>
+              <input type="text" id="postion" name="postion" required value={inputs.postion || ""} onChange={handleChange}/>
             </p>
             <p>
               <label htmlFor="year">Year:</label>
