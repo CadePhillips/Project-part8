@@ -6,8 +6,23 @@
     text-align: center;
 }
 
+.columns {
+    display: block;
+}
+
+
 @media only screen and (min-width:768px) {
     .w3-container {
         width: 40%;
+    }
+
+    .columns {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #player {
+        flex: 20%;
+        max-width: 20%;
     }
 }
