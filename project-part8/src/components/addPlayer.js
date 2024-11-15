@@ -23,7 +23,7 @@ const AddPlayer = (props) => {
     const formData = new FormData(event.target);
     console.log(...formData);
 
-    const response = await fetch("https://project-part9.onrender.com/api/players/", {
+    const response = await fetch("https://project-part9.onrender.com/api/players", {
       method:"POST",
       body:formData
     });
@@ -53,8 +53,8 @@ const AddPlayer = (props) => {
               <input type="number" id="number" name="number" required value={inputs.number || ""} onChange={handleChange}/>
             </p>
             <p>
-              <label htmlFor="postion">Positions:</label>
-              <input type="text" id="postion" name="postion" required value={inputs.postion || ""} onChange={handleChange}/>
+              <label htmlFor="position">Positions:</label>
+              <input type="text" id="position" name="position" required value={inputs.position || ""} onChange={handleChange}/>
             </p>
             <p>
               <label htmlFor="year">Year:</label>
