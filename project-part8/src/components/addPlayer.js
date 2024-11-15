@@ -23,7 +23,7 @@ const AddPlayer = (props) => {
     const formData = new FormData(event.target);
     console.log(...formData);
 
-    const response = await fetch("http://localhost:3002/api/players/", {
+    const response = await fetch("https://project-part9.onrender.com/api/players/", {
       method:"POST",
       body:formData
     });
