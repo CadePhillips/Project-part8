@@ -54,7 +54,7 @@ const AddPlayer = (props) => {
             </p>
             <p>
               <label htmlFor="position">Positions:</label>
-              <input type="text" id="position" name="position" required value={inputs.position || ""} onChange={handleChange}/>
+              <input type="text" id="position" name="position" required value={inputs.postion || ""} onChange={handleChange}/>
             </p>
             <p>
               <label htmlFor="year">Year:</label>
