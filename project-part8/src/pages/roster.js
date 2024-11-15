@@ -13,7 +13,7 @@ const Roster = () => {
 
         useEffect(() => {
         (async () => {
-            const response = await axios.get("https://project-part9.onrender.com");
+            const response = await axios.get("https://project-part9.onrender.com/api/players");
             setPlayers(response.data);
         })();
         }, []);
