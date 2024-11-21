@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "../css/main.css";
 import "../css/roster.css";
+import "../css/dialog.css";
 import Header from "../components/header";
 import AddPlayer from "../components/addPlayer";
 import Player from "../components/player";
@@ -9,7 +10,7 @@ import Player from "../components/player";
 const Roster = () => {
 
     const [players, setPlayers] = useState([]);
-        const [showAddDialog, setShowAddDialog] = useState(false);
+    const [showAddDialog, setShowAddDialog] = useState(false);
 
         useEffect(() => {
         (async () => {
@@ -26,7 +27,7 @@ const Roster = () => {
         setShowAddDialog(false);
         };
 
-        const updatePlayer = (player) => {
+        const updatePlayers = (player) => {
             setPlayers((players)=>[...players, player]);
         }
 
@@ -40,13 +41,14 @@ const Roster = () => {
             <button id="add-player" onClick={openAddDialog}>Add Player Here</button>
 
             {showAddDialog ? (
-            <AddPlayer closeDialog={closeAddDialog} showNewPlayer={updatePlayer} />
+            <AddPlayer closeDialog={closeAddDialog} showNewPlayer={updatePlayers} />
             ):("")} 
             
 
             <div className="columns">
             {players.map((player) => (
                 <Player 
+                _id={player._id}
                 name={player.name}
                 number={player.number}
                 position={player.position}

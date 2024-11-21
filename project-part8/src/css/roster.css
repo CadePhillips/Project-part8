@@ -1,6 +1,5 @@
 .w3-container {
-    background-color: #830E0D;
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -8,6 +7,10 @@
 
 .columns {
     display: block;
+}
+
+#player {
+    background-color: #830E0D;
 }
 
 
@@ -23,6 +26,11 @@
 
     #player {
         flex: 20%;
-        max-width: 20%;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
     }
+
+    
+
 }

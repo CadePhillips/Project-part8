@@ -1,9 +1,18 @@
 import "../css/dialog.css";
 import React, { useState } from "react";
 
-const AddPlayer = (props) => {
-  const [inputs, setInputs] = useState({});
-  const [result, setResult] = useState("");
+const EditPlayer = (props) => {
+  
+  const [inputs, setInputs] = useState({
+    _id: props._id,
+    name: props.name,
+    number: props.number,
+    positions: props.position,
+    year: props.year,
+    prev_img: props.image
+  });
+
+  const [result, setResult] = useState("")
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -17,34 +26,35 @@ const AddPlayer = (props) => {
     setInputs((values)=>({...values,[name]:value}));
   };
 
-  const addToServer = async(event) => {
+  const onSubmit = async(event) => {
     event.preventDefault();
     setResult("Sending...");
-
+    
     const formData = new FormData(event.target);
-    console.log(...formData);
-
-    const response = await fetch("https://project-part9.onrender.com/api/players", {
-      method:"POST",
+    const response = await fetch(`https://project-part9.onrender.com/api/players/${props._id}`,{
+      method:"PUT",
       body:formData
     });
 
-    if(response.status == 200) {
-      setResult("Player successfully added!");
-      props.showNewPlayer(await response.json());
+    if(response.status === 200) {
+      setResult("Player successfully updated");
       event.target.reset();
+      props.updatePlayer(await response.json());
+      props.closeDialog();
+    } else {
+      setResult("Error editing this player");
     }
   };
 
 
   return (
-    <div id="add-dialog" className="w3-modal">
+    <div id="edit-dialog" className="w3-modal">
       <div className="w3-modal-content">
         <div className="w3-container">
           <span id="dialog-close" className="w3-button w3-display-topright" onClick={props.closeDialog}>
             &times;
           </span>
-          <form id="add-player-form" onSubmit={addToServer}>
+          <form id="edit-player-form" onSubmit={onSubmit}>
             <p>
               <label htmlFor="name ">Player Name:</label>
               <input type="text" id="name" name="name" required value={inputs.name || ""} onChange={handleChange} />
@@ -82,4 +92,4 @@ const AddPlayer = (props) => {
   );
 };
 
-export default AddPlayer;
+export default EditPlayer;
