@@ -7,7 +7,7 @@ const Schedule = () => {
         <>
             <Header />
             
-            <div id="schedule-content" class="columns">
+            <div id="schedule-content" class="schedule-columns">
             <section id="schedule-section">
                 <img id="schedule-pic" src="images/school-logos/air-force-pic.jpg" alt="logo"/>
                 <img id="schedule-pic" src="images/logo-pic.jpg" alt="logo" />
@@ -24,7 +24,7 @@ const Schedule = () => {
             </section>
         </div>
 
-        <div id="schedule-content" class="columns">
+        <div id="schedule-content" class="schedule-columns">
         <section id="schedule-section">
                 <img id="schedule-pic" src="images/school-logos/ou-pic.jpg" alt="logo" />
                 <img id="schedule-pic" src="images/logo-pic.jpg" alt="logo" />

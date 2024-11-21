@@ -1,12 +1,13 @@
 import "../css/main.css";
 import "../css/coaches.css";
+import "../css/roster.css";
 import Header from "../components/header";
 
 const Coaches = () => {
     return (
         <>
             <Header />
-            <div id="coaches" class="columns">
+            <div id="coaches" className="columns">
             <section id="coach">
                 <img id="coach-pics" src="images/coach-pics/hc-pic.webp" alt="Coach Mainieri" />
                 <p>Name: Paul Mainieri</p>

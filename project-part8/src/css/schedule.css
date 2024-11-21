@@ -6,4 +6,8 @@
     #schedule-pic {
         padding-right: 100px;
     }
+
+    .schedule-columns {
+        display: flex;
+    }
 }

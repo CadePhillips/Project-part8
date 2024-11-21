@@ -45,7 +45,7 @@ const Roster = () => {
             ):("")} 
             
 
-            <div className="columns">
+            <div className="columns player-container">
             {players.map((player) => (
                 <Player 
                 _id={player._id}

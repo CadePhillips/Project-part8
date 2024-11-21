@@ -35,7 +35,7 @@ const Player = (props) => {
     return (
         <>
         {showPlayer ? (
-            <div>
+            <section id="player">
                 {showDeleteDialog ?(
                     <DeletePlayer
                         closeDialog={closeDeleteDialog}
@@ -62,7 +62,7 @@ const Player = (props) => {
                 )}
 
 
-            <section id="player">
+            
                 <img src={"https://project-part9.onrender.com/" + player.image} alt={player.name} />
                 <h2>{player.name} </h2>
                 
@@ -79,7 +79,6 @@ const Player = (props) => {
                 <p>Position(s): {player.position}</p>
                 <p>Year: {player.year}</p>
             </section>
-            </div>
         ) : (
             ""
         )}
