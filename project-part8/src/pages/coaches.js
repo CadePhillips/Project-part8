@@ -1,6 +1,5 @@
 import "../css/main.css";
 import "../css/coaches.css";
-import "../css/roster.css";
 import Header from "../components/header";
 
 const Coaches = () => {

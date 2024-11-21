@@ -127,9 +127,6 @@ body {
     height: 300px;
 }
 
-#player:hover {
-    scale: 1.25;
-}
 
 #social-content {
     text-align: center;
